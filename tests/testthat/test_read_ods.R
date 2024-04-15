@@ -124,6 +124,11 @@ test_that("trim_ws", {
     expect_equal(read_ods("../testdata/leadingspaces.ods", trim_ws = TRUE)[1,1, drop = TRUE], "abc")
 })
 
+test_that("trim_ws and colnames #185", {
+    expect_equal(colnames(read_ods("../testdata/spaces_colnames.ods", trim_ws = TRUE)), "abc")
+    expect_equal(colnames(read_ods("../testdata/spaces_colnames.ods", trim_ws = FALSE)), "     abc    ")
+})
+
 ## V2.0.0 behavior: backward compatibility
 
 test_that("Single column ODS v2.0.0", {
