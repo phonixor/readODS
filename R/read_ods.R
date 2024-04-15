@@ -253,6 +253,9 @@
     if (strings_as_factors) {
         res <- .convert_strings_to_factors(df = res)
     }
+    if (trim_ws && ncol(res) >= 1) {
+        colnames(res) <- stringi::stri_trim_both(colnames(res))
+    }
     if (as_tibble) {
         res <- tibble::as_tibble(x = res, .name_repair = .name_repair)
     }
