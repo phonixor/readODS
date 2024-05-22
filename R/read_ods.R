@@ -139,22 +139,11 @@
     return(data.frame())
 }
 
-.type_convert <- function(df, col_types = NULL, verbose = TRUE, na = c("", "NA"), trim_ws = TRUE) {
-    if (verbose) {
-        res <- readr::type_convert(df = df, col_types, na = na)
-    } else {
-        suppressMessages({
-            res <- readr::type_convert(df = df, col_types, na = na, trim_ws = trim_ws)
-        })
-    }
-    return(res)
-}
-
 .handle_col_types <- function(res, col_types, verbose, na, trim_ws) {
     if (isTRUE(is.na(col_types)) || nrow(res) == 0) {
         return(res)
     }
-    .type_convert(df = res, col_types = col_types, verbose = verbose, na = na, trim_ws = trim_ws)
+    minty::type_convert(df = res, col_types = col_types, verbose = verbose, na = na, trim_ws = trim_ws)
 }
 
 ## standardise `sheet` parameter as a number, i.e. sheet_index
