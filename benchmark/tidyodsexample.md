@@ -1,10 +1,11 @@
 # Benchmarks used in the README of tidyods
 
+
 ``` r
 date()
 ```
 
-    [1] "Sun Sep 10 16:20:14 2023"
+    [1] "Thu May 23 09:29:18 2024"
 
 ``` r
 devtools::load_all()
@@ -22,7 +23,7 @@ bench::mark("readODS" = read_ods(file, sheet = 2), check = FALSE, filter_gc = FA
     # A tibble: 1 × 4
       expression      min   median     mean
       <bch:expr> <bch:tm> <bch:tm> <bch:tm>
-    1 readODS      7.86ms   9.96ms     15ms
+    1 readODS      5.01ms   5.29ms   7.83ms
 
 ``` r
 postcodes_file <- here::here("benchmark/civil-service-postcodes-2021.ods")
@@ -51,4 +52,4 @@ bench::mark("readODS" = readODS::read_ods(postcodes_file, 2), check = FALSE, fil
     # A tibble: 1 × 4
       expression      min   median     mean
       <bch:expr> <bch:tm> <bch:tm> <bch:tm>
-    1 readODS       433ms    438ms    445ms
+    1 readODS       425ms    444ms    445ms
