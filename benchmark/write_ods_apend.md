@@ -5,7 +5,7 @@
 date()
 ```
 
-    [1] "Thu May 23 09:29:25 2024"
+    [1] "Sun May 26 01:39:19 2024"
 
 ``` r
 devtools::load_all()
@@ -30,21 +30,21 @@ system.time(write_ods(df1, path = path, sheet = "aaaa", append = TRUE))
 ```
 
        user  system elapsed 
-      0.254   0.020   0.290 
+      0.249   0.025   0.280 
 
 ``` r
 system.time(write_ods(df1, path = path, sheet = "aaaa", update = TRUE))
 ```
 
        user  system elapsed 
-      0.332   0.020   0.367 
+      0.313   0.035   0.357 
 
 ``` r
 system.time(write_ods(mtcars, path = path, sheet = "aaaa", update = TRUE))
 ```
 
        user  system elapsed 
-      0.225   0.012   0.249 
+      0.211   0.028   0.246 
 
 ``` r
 sessionInfo()
