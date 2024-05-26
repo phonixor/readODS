@@ -16,7 +16,7 @@ Let’s break it down
 date()
 ```
 
-    [1] "Sun May 26 01:38:17 2024"
+    [1] "Sun May 26 08:52:11 2024"
 
 ``` r
 library(nycflights13)
@@ -24,14 +24,14 @@ system.time(path <- writexl::write_xlsx(flights))
 ```
 
        user  system elapsed 
-      6.096   0.264   6.377 
+      6.253   0.256   6.539 
 
 ``` r
 system.time(out <- readxl::read_xlsx(path))
 ```
 
        user  system elapsed 
-      2.190   0.775   2.987 
+      2.166   0.632   2.820 
 
 ``` r
 all.equal(out, flights)
@@ -52,14 +52,14 @@ system.time(path <- readODS::write_ods(flights))
 ```
 
        user  system elapsed 
-     13.252   0.496  13.902 
+     13.197   0.507  13.808 
 
 ``` r
 system.time(out <- readODS::read_ods(path))
 ```
 
        user  system elapsed 
-     27.045   2.042  29.205 
+     26.976   1.752  28.813 
 
 ``` r
 all.equal(out, flights)
