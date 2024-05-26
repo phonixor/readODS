@@ -3,3 +3,5 @@ comment: false
 coverage:
   status:
     patch: off
+ignore:
+  - inst/include

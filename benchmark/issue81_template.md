@@ -5,7 +5,7 @@
 date()
 ```
 
-    [1] "Thu May 23 09:29:23 2024"
+    [1] "Sun May 26 08:53:10 2024"
 
 ``` r
 devtools::load_all()
@@ -19,7 +19,7 @@ system.time(x <- read_ods(file, sheet = 2, skip = 4))
 ```
 
        user  system elapsed 
-      0.375   0.072   0.446 
+      0.369   0.076   0.447 
 
 ``` r
 dim(x)

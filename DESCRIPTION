@@ -31,8 +31,6 @@ Imports:
     vctrs (>= 0.4.2),
     zip,
     tools
-LinkingTo: 
-    cpp11 (>= 0.4.6)
 Suggests:
     spelling, 
     testthat,
@@ -43,7 +41,7 @@ Suggests:
     withr,
     readr (>= 1.2.1)
 License: GPL-3
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 VignetteBuilder: knitr
