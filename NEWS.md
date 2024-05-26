@@ -1,4 +1,4 @@
-# readODS 2.2.0.999
+# readODS 2.3.0
 
 * Use `minty` instead of `readr` to reduce the number of dependencies
 * Fix #173, Use a modified vendored version of `cpp11` to avoid the "non-API calls"
