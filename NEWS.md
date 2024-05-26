@@ -1,5 +1,8 @@
 # readODS 2.2.0.999
 
+* Use `minty` instead of `readr` to reduce the number of dependencies
+* Fix #173, Use a modified vendored version of `cpp11` to avoid the "non-API calls"
+
 ## Bug fixes
 
 * Fix #185 - `trim_ws` for `colnames` behaves the same as `readxl::read_xlsx()`.
