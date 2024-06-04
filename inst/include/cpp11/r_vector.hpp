@@ -918,12 +918,23 @@ inline r_vector<T>::operator SEXP() const {
   }
   if (length_ < capacity_) {
     p->data_ = truncate(p->data_, length_, capacity_);
+#if R_VERSION >= R_Version(3, 4, 0) && R_VERSION < R_Version(4, 5, 0)
     SEXP nms = names();
     auto nms_size = Rf_xlength(nms);
     if ((nms_size > 0) && (length_ < nms_size)) {
       nms = truncate(nms, length_, capacity_);
       names() = nms;
     }
+#else
+    SEXP nms;
+    PROTECT(nms = names());
+    auto nms_size = Rf_xlength(nms);
+    if ((nms_size > 0) && (length_ < nms_size)) {
+      nms = truncate(nms, length_, capacity_);
+      names() = nms;
+    }
+    UNPROTECT(1);
+#endif
   }
   return data_;
 }
