@@ -5,7 +5,7 @@
 date()
 ```
 
-    [1] "Sun May 26 08:53:15 2024"
+    [1] "Tue Jun  4 18:39:29 2024"
 
 ``` r
 devtools::load_all()
@@ -28,7 +28,7 @@ system.time(write_ods(df1, path = tempfile(fileext = ".ods")))
 ```
 
        user  system elapsed 
-      0.042   0.004   0.052 
+      0.042   0.004   0.053 
 
 Large df
 
@@ -37,7 +37,7 @@ system.time(write_ods(nycflights13::flights))
 ```
 
        user  system elapsed 
-     14.147   0.584  14.910 
+     13.945   0.556  14.714 
 
 ``` r
 sessionInfo()
@@ -66,7 +66,7 @@ sessionInfo()
     [1] stats     graphics  grDevices utils     datasets  methods   base     
 
     other attached packages:
-    [1] readODS_2.2.0.9999 testthat_3.2.1    
+    [1] readODS_2.3.1  testthat_3.2.1
 
     loaded via a namespace (and not attached):
      [1] utf8_1.2.4         stringi_1.8.4      digest_0.6.35      magrittr_2.0.3    
@@ -74,7 +74,7 @@ sessionInfo()
      [9] rprojroot_2.0.4    jsonlite_1.8.8     zip_2.3.1          pkgbuild_1.4.4    
     [13] sessioninfo_1.2.2  brio_1.1.4         urlchecker_1.0.1   promises_1.3.0    
     [17] purrr_1.0.2        fansi_1.0.6        cli_3.6.2          shiny_1.8.1.1     
-    [21] rlang_1.1.3        ellipsis_0.3.2     remotes_2.5.0      withr_3.0.0       
+    [21] rlang_1.1.4        ellipsis_0.3.2     remotes_2.5.0      withr_3.0.0       
     [25] cachem_1.0.8       yaml_2.3.8         devtools_2.4.5     tools_4.4.0       
     [29] memoise_2.0.1      httpuv_1.6.15      vctrs_0.6.5        R6_2.5.1          
     [33] mime_0.12          lifecycle_1.0.4    minty_0.0.1        stringr_1.5.1     

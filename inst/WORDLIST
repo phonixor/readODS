@@ -1,5 +1,6 @@
 CMD
 Codecov
+GC
 Github
 Lifecycle
 OO
@@ -11,6 +12,7 @@ brohan
 ccf
 chainsawtiney
 com
+cpp
 cran
 fods
 hh
@@ -21,6 +23,7 @@ nd
 ods
 phonixor
 rOpenSci
+rchk
 steuer
 thosjleeper
 tibble

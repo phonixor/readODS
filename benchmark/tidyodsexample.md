@@ -5,7 +5,7 @@
 date()
 ```
 
-    [1] "Sun May 26 08:53:05 2024"
+    [1] "Tue Jun  4 18:39:19 2024"
 
 ``` r
 devtools::load_all()
@@ -23,7 +23,7 @@ bench::mark("readODS" = read_ods(file, sheet = 2), check = FALSE, filter_gc = FA
     # A tibble: 1 × 4
       expression      min   median     mean
       <bch:expr> <bch:tm> <bch:tm> <bch:tm>
-    1 readODS       5.2ms   5.36ms   7.67ms
+    1 readODS      5.08ms   5.43ms   7.84ms
 
 ``` r
 postcodes_file <- here::here("benchmark/civil-service-postcodes-2021.ods")
@@ -52,4 +52,4 @@ bench::mark("readODS" = readODS::read_ods(postcodes_file, 2), check = FALSE, fil
     # A tibble: 1 × 4
       expression      min   median     mean
       <bch:expr> <bch:tm> <bch:tm> <bch:tm>
-    1 readODS       420ms    428ms    430ms
+    1 readODS       416ms    425ms    427ms
