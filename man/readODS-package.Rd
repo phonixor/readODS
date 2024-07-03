@@ -11,6 +11,7 @@ Read ODS (OpenDocument Spreadsheet) into R as data frame. Also support writing d
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://docs.ropensci.org/readODS/}
   \item \url{https://github.com/ropensci/readODS}
   \item Report bugs at \url{https://github.com/ropensci/readODS/issues}
 }
