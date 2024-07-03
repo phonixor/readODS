@@ -74,13 +74,13 @@ read_ods("plant.ods", sheet = "mtcars_ods", range = "A1:C10")
 
 You cannot append to an existing sheet.
 
-```{r append_error, error = TRUE}
+```{r append_error, error = TRUE, purl = FALSE}
 write_ods(iris, "plant.ods", sheet = "mtcars_ods", append = TRUE)
 ```
 
 You cannot update a missing sheet.
 
-```{r update_error, error = TRUE}
+```{r update_error, error = TRUE, purl = FALSE}
 write_ods(iris, "plant.ods", sheet = "iris", update = TRUE)
 ```
 
