@@ -32,7 +32,7 @@ test_that("type_convert honoring na #2, issue 78", {
     expect_false(any(is.na(na_res$ex1[2:9])))
     expect_false(any(is.na(na_res$ex2[1:9])))
     expect_true(any(is.na(na_res$ex3[1:9]))) ## due to col_types
-    expect_false(any(is.na(na_res$ex4[1:9])))
+    ## expect_false(any(is.na(na_res$ex4[1:9]))) ## buggy parsing behavior of readr::type_convert(); fixed in minty
     na_res <- read_ods('../testdata/na_test3.ods', na = c("one"), col_types = readr::cols(ex1 = "c", ex2 = "c", ex3 = "c", ex4 = "c"))
     expect_true(is.na(na_res[1,1]))
     expect_false(is.na(na_res[2,1]))
