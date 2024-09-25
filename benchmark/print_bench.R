@@ -4,5 +4,5 @@ prefixes <- c("HEAD", "PR")
 
 for (prefix in prefixes) {
     print(head)
-    print(readRDS("benchmark/", prefix, "_write_ods_.RDS"))
+    print(readRDS(paste0("benchmark/", prefix, "_write_ods_.RDS")))
 }
