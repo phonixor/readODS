@@ -24,7 +24,6 @@ jobs:
             any::bench
             any::nycflights13
             any::remotes
-            any::here
       - name: install current version
         run: remotes::install_github("ropensci/readODS")
         shell: Rscript {0}
@@ -37,4 +36,3 @@ jobs:
         run: Rscript benchmark/bench.R PR
       - name: Print the benchmark
         run: Rscript benchmark/print_bench.R
-
