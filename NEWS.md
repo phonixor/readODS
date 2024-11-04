@@ -1,5 +1,7 @@
 # readODS 2.3.1
 
+* Undo #173, use `cpp11` like 2.2.0
+
 ## Bug fixes
 
 * Fix #190 a potential GC issue in the vendored cpp11 code, detected by rchk 
