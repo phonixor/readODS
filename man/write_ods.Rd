@@ -55,7 +55,7 @@ A (F)ODS file written to the file path location specified by the user. The value
 Function to write a single data frame or a list of data frames to a (f)ods file.
 }
 \details{
-This function emulates \code{\link[writexl:write_xlsx]{writexl::write_xlsx()}} and \code{\link[openxlsx:write.xlsx]{openxlsx::write.xlsx()}} except in the handling of list columns. The expected behaviour for this is undefined and the two functions behave differently. This function handles list columns by converting them to character vectors of R code (similar to the output of \code{\link[=dput]{dput()}}), which is probably not ideal.
+This function emulates \code{\link[writexl:write_xlsx]{writexl::write_xlsx()}} except in the handling of list columns. The expected behaviour for this is undefined and the two functions behave differently. This function handles list columns by converting them to character vectors of R code (similar to the output of \code{\link[=dput]{dput()}}), which is probably not ideal.
 }
 \examples{
 \dontrun{
