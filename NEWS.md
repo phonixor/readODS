@@ -5,6 +5,7 @@
 ## Bug fixes
 
 * Fix #190 a potential GC issue in the vendored cpp11 code, detected by rchk 
+* Fix #203 documentation issues
 
 # readODS 2.3.0
 

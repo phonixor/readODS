@@ -59,7 +59,7 @@ NULL, so that empty cells are treated as NA.}
 
 \item{formula_as_formula}{logical, a switch to display formulas as formulas "SUM(A1:A3)" or as the resulting value "3"... or "8".. . Default is FALSE.}
 
-\item{range}{selection of rectangle using Excel-like cell range, such as \code{range = "D12:F15"} or \code{range = "R1C12:R6C15"}. Cell range processing is handled by the \code{\link[=cellranger]{cellranger}} package. If sheet name is in the range, such as \code{range = "Sheet2!A2:B7"}, this sheet name is used instead of the provided \code{sheet}. If \code{sheet} is not the default value (1), a warning is given.}
+\item{range}{selection of rectangle using Excel-like cell range, such as \code{range = "D12:F15"} or \code{range = "R1C12:R6C15"}. Cell range processing is handled by the \code{\link[cellranger:cell_limits]{cellranger::as.cell_limits()}}. If sheet name is in the range, such as \code{range = "Sheet2!A2:B7"}, this sheet name is used instead of the provided \code{sheet}. If \code{sheet} is not the default value (1), a warning is given.}
 
 \item{row_names}{logical, indicating whether the file contains the names of the rows as its first column. Default is FALSE.}
 
