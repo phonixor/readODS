@@ -44,29 +44,21 @@
         } else {
             max_row <- n_max + 1
         }
-        limits <- c(
-            min_row = skip + 1,
-            max_row = max_row,
-            min_col = 1,
-            max_col = -1
-        )
-    } else {
-        if(skip != 0 || n_max != Inf) {
-            warning("Range and non-default value for skip or n_max given. Defaulting to range.", call. = FALSE)
-        }
-        tryCatch({
-            limits <- cellranger::as.cell_limits(range)
-        }, error = function(e) {
-            stop("Invalid `range`")
-        })
-        limits <- c(
-            min_row = limits[["ul"]][1],
-            max_row = limits[["lr"]][1],
-            min_col = limits[["ul"]][2],
-            max_col = limits[["lr"]][2]
-        )
+        return(c(min_row = skip + 1, max_row = max_row, min_col = 1, max_col = -1))
     }
-    return(limits)
+    if(skip != 0 || n_max != Inf) {
+        warning("Range and non-default value for skip or n_max given. Defaulting to range.", call. = FALSE)
+    }
+    tryCatch({
+        limits <- cellranger::as.cell_limits(range)
+    }, error = function(e) {
+        stop("Invalid `range`")
+    })
+    return(c(min_row = limits[["ul"]][1],
+             max_row = limits[["lr"]][1],
+             min_col = limits[["ul"]][2],
+             max_col = limits[["lr"]][2]
+    ))
 }
 
 .convert_strings_to_factors <- function(df) {
