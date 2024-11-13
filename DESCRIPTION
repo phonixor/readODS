@@ -25,7 +25,7 @@ URL: https://docs.ropensci.org/readODS/, https://github.com/ropensci/readODS
 BugReports: https://github.com/ropensci/readODS/issues
 Imports:
     cellranger,
-    minty,
+    minty (>= 0.0.4),
     stringi,
     tibble,
     vctrs (>= 0.4.2),

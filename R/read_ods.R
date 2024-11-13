@@ -181,20 +181,20 @@
                       flat = FALSE,
                       trim_ws = TRUE,
                       n_max = Inf) {
-    .check_read_args(path,
-        sheet,
-        col_names,
-        col_types,
-        na,
-        skip,
-        formula_as_formula,
-        range,
-        row_names,
-        strings_as_factors,
-        verbose,
-        as_tibble,
-        trim_ws,
-        n_max)
+    .check_read_args(path = path,
+        sheet = sheet,
+        col_names = col_names,
+        col_types = col_types,
+        na = na,
+        skip = skip,
+        formula_as_formula = formula_as_formula,
+        range = range,
+        row_names = row_names,
+        strings_as_factors = strings_as_factors,
+        verbose = verbose,
+        as_tibble = as_tibble,
+        trim_ws = trim_ws,
+        n_max = n_max)
     path <- normalizePath(path)
     if (flat) {
         .get_sheet_names_func <- get_flat_sheet_names_
