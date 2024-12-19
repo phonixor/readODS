@@ -11,12 +11,14 @@ test_that("issue 81, correctness", {
 })
 
 test_that("issue 81 real test", {
+    skip_if(!file.exists("../testdata/issue81.ods"))
     file <- "../testdata/issue81.ods"
     res <- read_ods(file, sheet = 2, skip = 4, as_tibble = FALSE)
     expect_equal(sum(is.na(res[,1])), 0)
 })
 
 test_that("issue 84", {
+    skip_if(!file.exists("../testdata/issue81.ods"))
     file <- "../testdata/issue81.ods"
     expect_error(read_ods(file, sheet = "Leavers"), NA)
 })

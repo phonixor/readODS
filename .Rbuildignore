@@ -24,3 +24,4 @@ notes.R
 ^revdep$
 ^LICENSE.note$
 ^.editorconfig$
+^tests/testdata/issue81.ods$
