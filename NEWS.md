@@ -1,6 +1,7 @@
 # readODS 2.3.2
 
 * Fix #207, trim off large or unused test files
+* Fix #209, require R >= 4.0.0 due to `cpp11`
 
 # readODS 2.3.1
 
