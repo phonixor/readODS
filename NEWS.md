@@ -1,3 +1,7 @@
+# readODS 2.3.2
+
+* Fix #207, trim off large or unused test files
+
 # readODS 2.3.1
 
 * Undo #173, use `cpp11` like 2.2.0
