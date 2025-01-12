@@ -165,3 +165,7 @@ test_that("Warns of empty sheet", {
         expect_warning(read_fods("../testdata/empty.fods"))
     })
 })
+
+test_that("minty v0.0.5 #211", {
+    expect_error(read_ods("../testdata/test_may_make_read_ods_crash_v2.ods", trim_ws = TRUE), NA)
+})
