@@ -2,6 +2,7 @@
 
 * Fix #207, trim off large or unused test files
 * Fix #209, require R >= 4.0.0 due to `cpp11`
+* Fix #211, fix a bug (in minty) for parsing cells with only spaces
 
 # readODS 2.3.1
 
